@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل تطبيق تأكيد - نسخة ويندوز</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #1a5f7a;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        p.subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #2ecc71;
+            color: white;
+            text-decoration: none;
+            padding: 15px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        .download-btn:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+        }
+        .version-info {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 40px;
+            display: block;
+        }
+        .instructions {
+            text-align: right;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            border-right: 4px solid #1a5f7a;
+        }
+        .instructions h3 {
+            margin-bottom: 15px;
+            color: #1a5f7a;
+            font-size: 18px;
+        }
+        .instructions ol {
+            margin-right: 20px;
+            line-height: 1.8;
+            color: #444;
+        }
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        .warning {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>تطبيق تأكيد (Taked POS)</h1>
+        <p class="subtitle">نظام إدارة المبيعات والمحاسبة المتكامل</p>
+        
+        <!-- رابط التحميل المباشر -->
+        <a href="https://github.com/azztlfaz-ux/taked-releases/releases/download/windows-1.20.49/Taked-Windows-1.20.49-portable.zip" class="download-btn">
+            ⬇️ تحميل التطبيق للويندوز
+        </a>
+        <span class="version-info">الإصدار 1.20.49 - متوافق مع Windows 10/11 (64-bit)</span>
+
+        <div class="instructions">
+            <h3>تعليمات التثبيت والتشغيل:</h3>
+            <ol>
+                <li>اضغط على زر التحميل الأخضر أعلاه.</li>
+                <li>بعد اكتمال التحميل، اذهب إلى مجلد "التنزيلات" (Downloads).</li>
+                <li>اضغط بالزر الأيمن على الملف المضغوط واختر <strong>Extract All</strong> (فك الضغط).</li>
+                <li>افتح المجلد الجديد واضغط مرتين على ملف <code>sales_app.exe</code> لتشغيل التطبيق.</li>
+                <li class="warning">ملاحظة: إذا ظهرت شاشة زرقاء للحماية من ويندوز، اضغط على "More info" ثم "Run anyway".</li>
+            </ol>
+        </div>
+    </div>
+
+</body>
+</html>
