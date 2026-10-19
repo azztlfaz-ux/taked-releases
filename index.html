@@ -96,12 +96,11 @@
         <h1>تطبيق تأكيد (Taked POS)</h1>
         <p class="subtitle">نظام إدارة المبيعات والمحاسبة المتكامل</p>
         
-        <!-- رابط التحميل المباشر -->
-              <a href="https://github.com/azztlfaz-ux/taked-releases/releases/download/windows-1.20.55/Taked-Windows-1.20.55-portable.zip" class="download-btn">
+             <!-- رابط التحميل المباشر (يتحدث تلقائياً لأحدث نسخة) -->
+        <a href="https://github.com/azztlfaz-ux/taked-releases/releases/latest/download/Taked-Windows-portable.zip" class="download-btn">
             ⬇️ تحميل التطبيق للويندوز
         </a>
-        <span class="version-info">الإصدار 1.20.55 - متوافق مع Windows 10/11 (64-bit)</span>
-
+        <span class="version-info">متوافق مع Windows 10/11 (64-bit) - <span id="auto-version">أحدث إصدار</span></span>
         <div class="instructions">
             <h3>تعليمات التثبيت والتشغيل:</h3>
             <ol>
@@ -114,5 +113,18 @@
         </div>
     </div>
 
+        <script>
+        // جلب رقم أحدث إصدار من GitHub تلقائياً
+        fetch('https://api.github.com/repos/azztlfaz-ux/taked-releases/releases/latest')
+            .then(response => response.json())
+            .then(data => {
+                if (data.tag_name) {
+                    // سيقوم بتحويل windows-1.20.55 إلى 1.20.55 فقط
+                    const version = data.tag_name.replace('windows-', '');
+                    document.getElementById('auto-version').innerText = 'الإصدار ' + version;
+                }
+            })
+            .catch(error => console.log('خطأ في جلب الإصدار:', error));
+    </script>
 </body>
 </html>
